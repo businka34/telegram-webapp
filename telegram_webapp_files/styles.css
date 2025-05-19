@@ -1,0 +1,429 @@
+:root {
+  --tg-theme-bg-color: #ffffff;
+  --tg-theme-text-color: #000000;
+  --tg-theme-button-color: #40a7e3;
+  --tg-theme-button-text-color: #ffffff;
+  --tg-theme-secondary-bg-color: #f0f0f0;
+  --accent-color: #8e44ad;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --error-color: #e74c3c;
+  --border-radius: 12px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
+  line-height: 1.6;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 70px; /* Space for bottom navigation */
+}
+
+.content {
+  flex: 1;
+  padding: var(--spacing-md);
+  overflow-y: auto;
+}
+
+/* Section Styles */
+.section {
+  animation: fadeIn 0.3s ease-in-out;
+  padding-bottom: var(--spacing-xl);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+h3 {
+  margin: var(--spacing-lg) 0 var(--spacing-sm);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+  background-color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.profile-info {
+  width: 100%;
+}
+
+.profile-info h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.profile-info p {
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.9rem;
+}
+
+.profile-strengths {
+  background-color: var(--tg-theme-secondary-bg-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+}
+
+/* Performance Section */
+.performance-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.result-container {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--tg-theme-secondary-bg-color);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--success-color);
+}
+
+/* Sales Section */
+.sales-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sale-form {
+  background-color: var(--tg-theme-secondary-bg-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+}
+
+.button-group {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.sales-list {
+  margin-top: var(--spacing-lg);
+}
+
+.sale-item {
+  background-color: var(--tg-theme-secondary-bg-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sale-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.sale-amount {
+  color: var(--success-color);
+}
+
+.sale-details p {
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.9rem;
+}
+
+/* Horoscope Section */
+.horoscope-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zodiac-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.zodiac-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--accent-color);
+}
+
+.horoscope-content {
+  background-color: var(--tg-theme-secondary-bg-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+}
+
+.horoscope-recommendations {
+  width: 100%;
+}
+
+.horoscope-recommendations ul {
+  list-style-type: none;
+}
+
+.horoscope-recommendations li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid #eee;
+}
+
+.horoscope-recommendations li:last-child {
+  border-bottom: none;
+}
+
+.astro-events {
+  width: 100%;
+  margin-top: var(--spacing-lg);
+}
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid #eee;
+}
+
+.event-date {
+  font-weight: 500;
+}
+
+/* Notifications Section */
+.notifications-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.notification-item {
+  background-color: var(--tg-theme-secondary-bg-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.notification-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notification-item.unread {
+  border-left: 4px solid var(--accent-color);
+}
+
+.notification-item.read {
+  opacity: 0.7;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.notification-date {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.unread-badge {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.notification-title {
+  margin: var(--spacing-xs) 0;
+  font-size: 1rem;
+}
+
+.notification-message {
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.notification-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-lg);
+  color: #666;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--tg-theme-bg-color);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-xs) 0;
+  z-index: 1000;
+}
+
+.bottom-nav button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background: none;
+  border: none;
+  color: var(--tg-theme-text-color);
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.bottom-nav button.active {
+  color: var(--accent-color);
+  opacity: 1;
+}
+
+.bottom-nav .icon {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Buttons */
+.primary-button, .secondary-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.primary-button {
+  background-color: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+}
+
+.secondary-button {
+  background-color: var(--tg-theme-secondary-bg-color);
+  color: var(--tg-theme-text-color);
+}
+
+.primary-button:hover, .secondary-button:hover {
+  opacity: 0.9;
+}
+
+.small {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  width: auto;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  #app {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
