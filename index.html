@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Web App</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div class="content" id="content">
+      <!-- Динамический контент будет загружен здесь -->
+    </div>
+    
+    <nav class="bottom-nav">
+      <button id="profile-btn" class="active">
+        <span class="icon">👤</span>
+        <span>Профиль</span>
+      </button>
+      <button id="performance-btn">
+        <span class="icon">📊</span>
+        <span>Результат</span>
+      </button>
+      <button id="sales-btn">
+        <span class="icon">💰</span>
+        <span>Продажи</span>
+      </button>
+      <button id="horoscope-btn">
+        <span class="icon">✨</span>
+        <span>Гороскоп</span>
+      </button>
+      <button id="notifications-btn">
+        <span class="icon">🔔</span>
+        <span>Уведомления</span>
+      </button>
+    </nav>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
